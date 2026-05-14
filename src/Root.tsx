@@ -5,8 +5,8 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import './App.scss';
 import { App } from './App';
 import { HomePage } from './pages/HomePage';
-import { Tabs } from './pages/Tabs';
 import { PageNotFound } from './pages/PageNotFound';
+import { TabsPage } from './pages/TabsPage';
 
 export const Root = () => (
   <HashRouter>
@@ -15,8 +15,8 @@ export const Root = () => (
         <Route index element={<HomePage />} />
         <Route path="home" element={<Navigate to="/" replace />} />
         <Route path="tabs">
-          <Route index element={<Tabs />} />
-          <Route path=":tabId" element={<Tabs />} />
+          <Route index element={<TabsPage />} />
+          <Route path=":tabId" element={<TabsPage />} />
         </Route>
         <Route path="*" element={<PageNotFound />} />
       </Route>
